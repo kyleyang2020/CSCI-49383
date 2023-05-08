@@ -6,6 +6,7 @@ public class SpawnObject : MonoBehaviour
     public GameObject objectToSpawn;
     public float spawnDistance = 1.0f;
     public float spawnHeight = 0.0f;
+    public AudioSource audioSource; //audio button
     //added moved
     //float goldtotall = GameObject.Find("GoldTracker").GetComponent<GoldTrackerController>().totalGold;
     // create an object reference to the GoldTrackerController class
@@ -18,6 +19,8 @@ public class SpawnObject : MonoBehaviour
     {
         button = GetComponent<Button>();
         //GoldTrackerController goldTracker = Canvas.FindObjectOfType<GoldTrackerController>();
+	
+	audioSource.time = 0.4f; //audio skip
 
         if (button != null)
         {
@@ -48,6 +51,9 @@ public class SpawnObject : MonoBehaviour
         // Spawn the object at the calculated position and rotation
         if (GoldTrackerController.totalGold >= 500 )
         {
+	    // Play the audio clip
+            audioSource.Play();
+
 	    GoldTrackerController.totalGold = GoldTrackerController.totalGold - 500;
 	    GoldTrackerController.goldText.text = "Gold: " + GoldTrackerController.totalGold.ToString();
             Instantiate(objectToSpawn, spawnPosition, buttonRotation);
