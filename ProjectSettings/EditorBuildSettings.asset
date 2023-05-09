@@ -8,12 +8,18 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Test.unity
     guid: 319dafa5c80f29f428dc1e0d03f04177
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/KyleScene.unity
     guid: 333777fb04f093742ac3cf0ca1b5e242
+  - enabled: 0
+    path: Assets/Scenes/EricScenePart1.unity
+    guid: dc8b38a6991af9f4da47a55989565cd4
+  - enabled: 0
+    path: Assets/Scenes/Farhana Scene.unity
+    guid: e250641dade6a8c409c3d054a6d1fbec
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 6a51965cf8cb4444fa1df478bba19461, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 5bac0eaf5391ab243bea1b09db62da2f, type: 2}
