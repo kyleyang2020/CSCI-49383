@@ -7,12 +7,13 @@ public class EnemyMovement : MonoBehaviour
     public float attackRange = 2.5f; // the range at which the enemy will start its attack animation
     NavMeshAgent agent;
     public Animator animator;
-
+    
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
         target = GameObject.FindGameObjectWithTag("Player").transform;
         animator = agent.GetComponent<Animator>();
+       
     }
 
     void Update()
@@ -32,12 +33,15 @@ public class EnemyMovement : MonoBehaviour
             if (distance < attackRange)
             {
                 // trigger the attack animation
+               
                 animator.SetTrigger("Attack");
+                
             }
         }
     }
     public void Die()
     {
+       
         animator.SetTrigger("Die");
         agent.enabled = false;
     }
