@@ -5,15 +5,22 @@ using UnityEngine.SceneManagement;
 
 public class SceneChange : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public void EricScene()
     {
-        
+        SceneManager.LoadScene("Eric");
     }
 
-    // Update is called once per frame
-    void Update()
+    public void FarhanaScene()
     {
-        
+        SceneManager.LoadScene("Farhana");
+    }
+    public void KyleScene()
+    {
+        SceneManager.LoadScene("Kyle");
+    }
+
+    public void HomeScene()
+    {
+        SceneManager.LoadScene("Sample");
     }
 }
